@@ -31,7 +31,7 @@ body {
 .header {
     padding: 20px 0;
     border-bottom: 1px solid #1f1f24;
-    position: fixed; /* Изменили sticky на fixed, чтобы убрать баг с пустотой */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
@@ -103,7 +103,7 @@ body {
 }
 
 .hero {
-    padding: 180px 0 140px 0; /* Увеличили верхний отступ на ПК, чтобы шапка не перекрывала текст */
+    padding: 180px 0 140px 0; 
     background: radial-gradient(circle at 80% 20%, #1a1111 0%, var(--bg-dark) 50%);
     border-bottom: 1px solid #1f1f24;
 }
@@ -235,7 +235,7 @@ body {
 .header {
     padding: 20px 0;
     border-bottom: 1px solid #1f1f24;
-    position: fixed; /* Изменили sticky на fixed, чтобы убрать баг с пустотой */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
@@ -307,7 +307,7 @@ body {
 }
 
 .hero {
-    padding: 180px 0 140px 0; /* Увеличили верхний отступ на ПК, чтобы шапка не перекрывала текст */
+    padding: 180px 0 140px 0; 
     background: radial-gradient(circle at 80% 20%, #1a1111 0%, var(--bg-dark) 50%);
     border-bottom: 1px solid #1f1f24;
 }
@@ -413,10 +413,10 @@ body {
         left: 0;
         width: 100%;
         padding: 15px 0;
-        background-color: #0a0a0c; /* Плотный черный цвет */
+        background-color: #0a0a0c;
     }
 
-    /* ХАК: Создаем черную заглушку, которая уходит вверх на 100px и заливает пустоту */
+    
     .header::before {
         content: "";
         position: absolute;
@@ -448,7 +448,7 @@ body {
     }
 
     .hero {
-        padding: 140px 0 60px 0; /* Корректный отступ контента сверху */
+        padding: 140px 0 60px 0; 
     }
 
     .hero-title {
