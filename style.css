@@ -31,8 +31,10 @@ body {
 .header {
     padding: 20px 0;
     border-bottom: 1px solid #1f1f24;
-    position: sticky;
+    position: fixed; /* Изменили sticky на fixed, чтобы убрать баг с пустотой */
     top: 0;
+    left: 0;
+    width: 100%;
     background-color: rgba(10, 10, 12, 0.8);
     backdrop-filter: blur(10px);
     z-index: 100;
@@ -101,7 +103,7 @@ body {
 }
 
 .hero {
-    padding: 140px 0;
+    padding: 180px 0 140px 0; /* Увеличили верхний отступ на ПК, чтобы шапка не перекрывала текст */
     background: radial-gradient(circle at 80% 20%, #1a1111 0%, var(--bg-dark) 50%);
     border-bottom: 1px solid #1f1f24;
 }
@@ -189,24 +191,6 @@ body {
     font-weight: 600;
 }
 
-@media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .nav {
-        gap: 15px;
-    }
-    .hero-title {
-        font-size: 32px;
-    }
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-}
-
 .card-icon svg {
     width: 48px;
     height: 48px;
@@ -216,4 +200,36 @@ body {
 
 .card:hover .card-icon svg {
     transform: scale(1.1) rotate(3deg);
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 0; 
+    }
+    .header .container {
+        flex-direction: row; 
+        justify-content: space-between;
+        gap: 0;
+    }
+    .logo {
+        font-size: 20px; /
+    }
+    .nav {
+        display: none; 
+    }
+    .header .btn {
+        padding: 8px 16px; 
+        font-size: 14px;
+    }
+    .hero {
+        padding: 120px 0 60px 0; 
+    }
+    .hero-title {
+        font-size: 32px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
 }
